@@ -3,21 +3,21 @@
     "capabilities": [
         ""
     ],
-    "companyName": "sebastian-kloppe@gmx.de",
-    "longName": "AnimationTestBaslt2",
+    "companyName": "yeahdev@gmail.com",
+    "longName": "AnimationTestBasalt2",
     "projectType": "native",
     "resources": {
         "media": []
     },
     "sdkVersion": "3",
-    "shortName": "AnimationTestBaslt2",
+    "shortName": "ATB2",
     "targetPlatforms": [
         "aplite",
         "basalt"
     ],
     "uuid": "62bbd434-a8b3-4de3-b928-fbffaf34caca",
     "versionCode": 1,
-    "versionLabel": "1.0",
+    "versionLabel": "1.1",
     "watchapp": {
         "watchface": true
     }
