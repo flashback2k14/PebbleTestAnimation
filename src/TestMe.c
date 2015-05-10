@@ -13,7 +13,7 @@ Line line_2_text_layer;
 bool isDateShown = 1;	
 
 /**
- * Initialisation TextLayers
+ * Initialisation TextLayer
  */
 static TextLayer* init_text_layer(GRect location, GColor textColor, GColor backgroundColor, const char *textFont, GTextAlignment alignment) {
   TextLayer *layer = text_layer_create(location);
@@ -40,11 +40,11 @@ static void handle_minute_tick(struct tm *tick_time, TimeUnits units_changed) {
 	text_layer_set_text(line_2_text_layer.date_layer, s_date_text);
 
 	#ifndef PBL_PLATFORM_APLITE
-		init_animations_basalt();
+		init_animations_basalt(&line_2_text_layer);
 	#else
-		init_animations_aplite();
+		init_animations_aplite(&line_2_text_layer);
 	#endif	
-  schedule_animation(tick_time);
+  schedule_animation(tick_time, &line_2_text_layer);
 }
 
 /**
@@ -65,7 +65,7 @@ static void main_window_load(Window *window) {
 	layer_add_child(window_get_root_layer(window), text_layer_get_layer(line_2_text_layer.date_layer));
 
   #ifdef PBL_PLATFORM_APLITE
-		init_animations_aplite();
+		init_animations_aplite(&line_2_text_layer);
 	#endif
   tick_timer_service_subscribe(MINUTE_UNIT, &handle_minute_tick);
 }

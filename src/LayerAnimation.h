@@ -38,17 +38,17 @@ extern bool isDateShown;
  * Global Methods for Aplite
  */
 extern void animationStoppedHandler(Animation *anim, bool finished, void *context);
-extern void init_animations_aplite();
+extern void init_animations_aplite(Line *line);
 
 /**
  * Global Methods for Basalt
  */
-extern void init_animations_basalt();
+extern void init_animations_basalt(Line *line);
 
 /**
  * Global Methods - Non Device-specific
  */
-extern void schedule_animation(struct tm *tick_time);
+extern void schedule_animation(struct tm *tick_time, Line *line);
 
 #endif
 	
