@@ -13,13 +13,22 @@
 #define ANIMATION_DURATION_IN_MS 1500
 #define ANIMATION_DELAY_IN_MS 500	
 	
+/**
+ * Definition Struct Line
+ */
+typedef struct {
+	TextLayer *time_layer;
+	TextLayer *date_layer;
+	PropertyAnimation *go_to_right_anim;
+	PropertyAnimation *from_the_left_anim;
+} Line;
+
 /** 
  * UI Elements
  */
-extern Window *s_main_window;
-extern TextLayer *s_time_layer, *s_date_layer;
-extern PropertyAnimation *s_go_to_right_anim, *s_from_the_left_anim;
-	
+extern Window *main_window;
+extern Line line_2_text_layer;
+
 /**
  * Global Variables
  */
